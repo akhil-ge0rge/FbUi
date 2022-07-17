@@ -12,15 +12,16 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  TextEditingController _textController = TextEditingController();
+  final TextEditingController _textController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.only(left: 15, top: 10, right: 15, bottom: 10),
+            padding:
+                const EdgeInsets.only(left: 15, top: 10, right: 15, bottom: 10),
             height: 130,
             width: 400,
             // color: Colors.black,
@@ -29,12 +30,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       radius: 25,
                       backgroundImage: NetworkImage(
                           'https://cdn.britannica.com/45/223045-050-A6453D5D/Telsa-CEO-Elon-Musk-2014.jpg?w=400&h=300&c=crop'),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Flexible(
@@ -49,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Divider(
@@ -62,11 +63,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     TextButton.icon(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.videocam,
                         color: Colors.red,
                       ),
-                      label: Text('Live'),
+                      label: const Text('Live'),
                     ),
                     Container(
                       height: 20,
@@ -75,11 +76,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     TextButton.icon(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.photo_library_rounded,
                         color: Colors.green,
                       ),
-                      label: Text('Photos'),
+                      label: const Text('Photos'),
                     ),
                     Container(
                       height: 20,
@@ -88,11 +89,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     TextButton.icon(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.video_call,
                         color: Colors.purple,
                       ),
-                      label: Text('Live'),
+                      label: const Text('Live'),
                     ),
                   ],
                 ),
@@ -103,17 +104,17 @@ class _HomeScreenState extends State<HomeScreen> {
             color: Colors.grey[300],
             height: 15,
           ),
-          ActiveUSers(),
+          const ActiveUSers(),
           Container(
             color: Colors.grey[300],
             height: 15,
           ),
-          StoryView(),
+          const StoryView(),
           Container(
             color: Colors.grey[300],
             height: 15,
           ),
-          Post(),
+          const Post(),
           Container(
             color: Colors.grey[300],
             height: 15,
